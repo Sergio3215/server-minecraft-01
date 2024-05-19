@@ -1,2 +1,4 @@
 [phases.build]
-cmds = ["echo building..","docker compose up -d", "echo finishing..."]
+cmds = ["echo building..","docker compose up -d"]
+[start]
+cmds = ["echo finishing..."]
