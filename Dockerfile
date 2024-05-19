@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY build-info.sh /opt
 
-RUN apt-get install jq && /opt/build-info.sh
+# RUN apt-get install jq && /opt/build-info.sh
 
 EXPOSE 25565
 
