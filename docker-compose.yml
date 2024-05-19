@@ -1,0 +1,19 @@
+services:
+  mc:
+    container_name: "mc-server"
+    expose:
+      - "25565:25565"
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      VERSION: "1.20.4"
+      TYPE: "FORGE"
+      ONLINE_MODE: "FALSE"
+      ENABLE_WHITELIST: "FALSE"
+    volumes:
+      # attach the relative directory 'data' to the container's /data path
+      - ./data:/data
