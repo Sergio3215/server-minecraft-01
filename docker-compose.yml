@@ -2,7 +2,7 @@ services:
   mc:
     container_name: "mc-server"
     expose:
-      - "25565:25565"
+      - "0:25565"
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
