@@ -17,3 +17,6 @@ services:
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - ./data:/data
+    dns:
+    - 8.8.8.8
+    - 8.8.4.4
