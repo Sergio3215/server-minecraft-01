@@ -1,19 +1,22 @@
 {
-  "minecraft:recipes/transportation/mangrove_boat": {
-    "criteria": {
-      "in_water": "2024-05-20 04:34:04 +0000"
-    },
-    "done": true
-  },
-  "minecraft:husbandry/tame_an_animal": {
-    "criteria": {
-      "tamed_animal": "2024-05-20 04:35:29 +0000"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/crafting_table": {
     "criteria": {
       "unlock_right_away": "2024-05-20 04:31:45 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:flower_forest": "2024-05-20 04:31:46 +0000",
+      "minecraft:sunflower_plains": "2024-05-20 04:35:02 +0000",
+      "minecraft:river": "2024-05-20 04:34:05 +0000",
+      "minecraft:plains": "2024-05-20 04:32:20 +0000"
+    },
+    "done": false
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2024-05-20 04:34:04 +0000"
     },
     "done": true
   },
@@ -28,21 +31,6 @@
       "in_water": "2024-05-20 04:34:04 +0000"
     },
     "done": true
-  },
-  "minecraft:adventure/root": {
-    "criteria": {
-      "killed_by_something": "2024-05-20 04:46:44 +0000"
-    },
-    "done": true
-  },
-  "minecraft:adventure/adventuring_time": {
-    "criteria": {
-      "minecraft:flower_forest": "2024-05-20 04:31:46 +0000",
-      "minecraft:sunflower_plains": "2024-05-20 04:35:02 +0000",
-      "minecraft:river": "2024-05-20 04:34:05 +0000",
-      "minecraft:plains": "2024-05-20 04:32:20 +0000"
-    },
-    "done": false
   },
   "minecraft:recipes/transportation/bamboo_raft": {
     "criteria": {
@@ -77,6 +65,18 @@
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
       "in_water": "2024-05-20 04:34:04 +0000"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/tame_an_animal": {
+    "criteria": {
+      "tamed_animal": "2024-05-20 04:35:29 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2024-05-20 04:46:44 +0000"
     },
     "done": true
   },

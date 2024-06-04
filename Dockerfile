@@ -12,6 +12,7 @@ ENV TYPE=FORGE
 ENV ENABLE_WHITELIST=FALSE
 ENV ONLINE_MODE=FALSE
 
+
 # RUN apt-get install jq && /opt/build-info.sh
 
 EXPOSE 25565
