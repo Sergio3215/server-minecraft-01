@@ -1,26 +1,26 @@
-FROM itzg/minecraft-server
+# FROM itzg/minecraft-server
 
-WORKDIR /app
+# WORKDIR /app
 
-# COPY whitelist.json /data
+# # COPY whitelist.json /data
 
-COPY build-info.sh /opt
+# COPY build-info.sh /opt
 
-ENV EULA=TRUE
-ENV VERSION=1.20.4
-ENV TYPE=FORGE
-ENV ENABLE_WHITELIST=FALSE
-ENV ONLINE_MODE=FALSE
+# ENV EULA=TRUE
+# ENV VERSION=1.20.4
+# ENV TYPE=FORGE
+# ENV ENABLE_WHITELIST=FALSE
+# ENV ONLINE_MODE=FALSE
 
 
-# RUN apt-get install jq && /opt/build-info.sh
+# EXPOSE 25565
 
-EXPOSE 25565
+FROM ubuntu:20.04
+
+RUN apt-get update
+RUN apt install docker-ce -y
+RUN apt install docker.io -y
+RUN apt install docker-compose-plugin -y
+RUN docker compose up -d
 
 CMD ["java", "-Xmx1G", "-Xms1G", "-jar", "server.jar"]
-
-
-# FROM openjdk:latest
-# WORKDIR /data
-# RUN echo "eula=true" > eula.txt
-# CMD ["java", "-Xmx1G", "-Xms1G", "-jar", "server.jar"]
