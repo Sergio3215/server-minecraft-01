@@ -21,7 +21,7 @@ RUN apt-get update
 # RUN apt install docker-ce -y
 RUN apt install docker.io -y
 RUN apt install curl -y
-RUN apt-get -y install python-pip
+RUN apt -y install python-pip
 RUN pip install docker-compose
 RUN docker-compose up
 # RUN apt install docker-compose-plugin -y
