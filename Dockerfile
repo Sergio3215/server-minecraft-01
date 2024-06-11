@@ -20,9 +20,7 @@ FROM ubuntu:20.04
 RUN apt-get update
 # RUN apt install docker-ce -y
 RUN apt install docker.io -y
-RUN apt install curl -y
-RUN apt -y install python-pip
-RUN pip install docker-compose
+RUN apt-get install docker-compose-plugin
 RUN docker-compose up
 # RUN apt install docker-compose-plugin -y
 # RUN docker-compose up -d
