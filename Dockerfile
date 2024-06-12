@@ -1,10 +1,12 @@
-# FROM itzg/minecraft-server
+FROM itzg/minecraft-server
 
-# WORKDIR /app
+WORKDIR /app
 
-# # COPY whitelist.json /data
+# COPY whitelist.json /data
 
-# COPY build-info.sh /opt
+COPY build-info.sh /opt
+
+COPY mods/*.jar /data/mods
 
 # ENV EULA=TRUE
 # ENV VERSION=1.20.4
@@ -13,17 +15,14 @@
 # ENV ONLINE_MODE=FALSE
 
 
-# EXPOSE 25565
+# RUN apt-get install jq && /opt/build-info.sh
 
-FROM ubuntu:20.04
-
-RUN apt-get update
-# RUN apt install docker-ce -y
-RUN apt install docker.io -y
-RUN apt install curl -y
-RUN curl -L https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-$(uname -m) -o /usr/local/bin/docker-compose
-RUN chmod u+x /usr/local/bin/docker-compose
-# RUN apt install docker-compose-plugin -y
-# RUN docker-compose up
+EXPOSE 25565
 
 CMD ["java", "-Xmx1G", "-Xms1G", "-jar", "server.jar"]
+
+
+# FROM openjdk:latest
+# WORKDIR /data
+# RUN echo "eula=true" > eula.txt
+# CMD ["java", "-Xmx1G", "-Xms1G", "-jar", "server.jar"]
